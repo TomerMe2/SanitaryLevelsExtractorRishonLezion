@@ -13,8 +13,11 @@ More info can be found here: https://www.meida.org.il/?p=11611 <br/>
 The municipality published this data in a ZIP file that contains a lot of PDFs with super generic names, like: 'דוח ביקורת (18)'. <br/>
 Most of the times, you couldn't tell the resturant name from the file name. These PDFs are scans of papers, so they are practically images and not texts. <br/>
 
+I found that most of the businesses that the municipality conducted checkups on have poor (ירודה) sanitary level. It's upsetting.
 
 ## Technological Solution
+You can run the notebook using this link: <br/>
+https://colab.research.google.com/github/TomerMe2/SanitaryLevelsExtractorRishonLezion/blob/main/SanitaryLevelsPdfsToExcel.ipynb
 I'm using Tesseract OCR with some search heuristics to locate the important lines and then I'm extracting the important data from these lines. <br/>
 Using Levenshtein distance was cruicial to the success of the search heuristics because the OCR isn't perfect and it might detect texts that are off by a small amount of characters compared to the original text. For example, the OCR predicts 'ט' instead of 'ם' a lot of time.
 I made this code to create an excel file to search for locations and to look on the data in an organized way. <br/>
